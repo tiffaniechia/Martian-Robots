@@ -4,7 +4,7 @@ describe("robot", function () {
     var robot, result;
 
     beforeEach(function () {
-        robot = new Robot(5, 3, "N", "LL");
+        robot = new Robot(5, 3, "N", ["L","L"]);
     });
 
     describe("Initialize", function () {
@@ -12,7 +12,7 @@ describe("robot", function () {
             expect(robot.xAxis).toEqual(5);
             expect(robot.yAxis).toEqual(3);
             expect(robot.facingDirection).toEqual("N");
-            expect(robot.instructions).toEqual("LL");
+            expect(robot.instructions).toEqual(["L","L"]);
         });
     });
 

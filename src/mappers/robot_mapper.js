@@ -8,7 +8,7 @@ var map = function (rawRobotsData) {
             xAxis: parseInt(data[0]),
             yAxis: parseInt(data[1]),
             facingDirection: data[2],
-            instructions: data[3]
+            instructions: data[3].split("")
         };
         return new Robot(parsedData.xAxis, parsedData.yAxis, parsedData.facingDirection, parsedData.instructions);
     });
