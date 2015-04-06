@@ -71,5 +71,4 @@ describe("grid", function () {
             expect(result).toBeFalsy();
         });
     });
-
 });

@@ -22,5 +22,4 @@ describe("input_service", function () {
             expect(result).toEqual(["1 1 E RFRFRFRF", "3 2 N FRRFLLFFRRFLL", "0 3 W LLFFFLFLFL"]);
         });
     });
-
 });
