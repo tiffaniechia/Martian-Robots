@@ -23,15 +23,13 @@ jasmine-node spec/
 
 Before I started the problem I had a few things in mind that I wanted to accomplish. I wanted to create an application that had the ability to extend easily, such that the addition of new features/business logic or new objects would affect as little of the rest of the code base as possible. I also wanted to application to adhere to the SOLID pattern as much as possible - in particular single responsibility. I also wanted to observe appropriate encapsulation was as well.
 
-
- |Directory|Files|Design Decision|
- |---|---|---|
- | **src/service** | input_service.js | Services simply gets data from resource (input.txt in this case), and returns a usable raw data. Service is created this way so that the application can easily switched to fetch data resources from other sources, for example a database,  (even if they presented a differing data resources structure) without affecting the rest of the code base. |
- | **src/mapper** | grid_mapper.js, robot_mapper.js | Mappers hold data logic that returns raw data into meaningful objects that can be consumed by the controller. Error handling is done here. |
- | **src/models** | grid.js, robot.js| Models are unware of the existence of anything beyond themselves. Extending these objects and adding new objects can hence be done at ease without affecting other parts of the code base. |
- | **src** | main_controller.js |  Contains all the core business logic. Since this has the highest propensity for change, it is not created as a dependency, rather it is dependent on objects with less propensity for change. |
- |**main.js**|| Serves as entry point into the application.|
-
+|Directory|Files|Design Decision|
+|---|---|---|
+|**src/service**|input_service.js| Services simply gets data from resource (input.txt in this case), and returns a usable raw data. Service is created this way so that the application can easily switched to fetch data resources from other sources, for example a database,  (even if they presented a differing data resources structure) without affecting the rest of the code base.|
+| **src/mapper** | grid_mapper.js, robot_mapper.js | Mappers hold data logic that returns raw data into meaningful objects that can be consumed by the controller. Error handling is done here. |
+| **src/models** | grid.js, robot.js | Models are unware of the existence of anything beyond themselves. Extending these objects and adding new objects can hence be done at ease without affecting other parts of the code base. |
+| **src** | main_controller.js | Contains all the core business logic. Since this has the highest propensity for change, it is not created as a dependency, rather it is dependent on objects with less propensity for change. |
+| **root** | main.js | Serves as entry point into the application. |
 
 
 ##3.Src File Structure
