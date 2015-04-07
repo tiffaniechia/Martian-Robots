@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tiffaniechia/Martian-Robots",
   "devDependencies": {
+    "chalk": "^1.0.0",
     "jasmine-node": "^1.14.5",
     "underscore": "^1.8.3"
   }
